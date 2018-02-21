@@ -6,7 +6,7 @@ using Vidly.Models;
 
 namespace Vidly.ViewModels
 {
-    public class NewCustomerViewModel
+    public class CustomerFormViewModel
     {
         //I don't use List<T> because I don't need add or delete methode just Iterate MembershipType.
         public IEnumerable<MembershipType> MembershipTypes { get; set; }

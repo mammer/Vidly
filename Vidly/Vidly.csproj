@@ -81,6 +81,7 @@
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System" />
     <Reference Include="System.Data" />
+    <Reference Include="System.Design" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
@@ -245,6 +246,30 @@
     <Compile Include="Migrations\201802180111024_SomeModoficationInDbContext.Designer.cs">
       <DependentUpon>201802180111024_SomeModoficationInDbContext.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201802190105589_AddColumnNumberInStockToMovieTable.cs" />
+    <Compile Include="Migrations\201802190105589_AddColumnNumberInStockToMovieTable.Designer.cs">
+      <DependentUpon>201802190105589_AddColumnNumberInStockToMovieTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201802190120104_AddColumnReleaseDateToMovieTable.cs" />
+    <Compile Include="Migrations\201802190120104_AddColumnReleaseDateToMovieTable.Designer.cs">
+      <DependentUpon>201802190120104_AddColumnReleaseDateToMovieTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201802190123300_AddColumnDateAddedToMovieTable.cs" />
+    <Compile Include="Migrations\201802190123300_AddColumnDateAddedToMovieTable.Designer.cs">
+      <DependentUpon>201802190123300_AddColumnDateAddedToMovieTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201802191537176_SetNameOfMembershipType.cs" />
+    <Compile Include="Migrations\201802191537176_SetNameOfMembershipType.Designer.cs">
+      <DependentUpon>201802191537176_SetNameOfMembershipType.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201802191545352_AddSomeDataToGenreTable.cs" />
+    <Compile Include="Migrations\201802191545352_AddSomeDataToGenreTable.Designer.cs">
+      <DependentUpon>201802191545352_AddSomeDataToGenreTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201802191701106_AddModificationInColumnToMovieTable.cs" />
+    <Compile Include="Migrations\201802191701106_AddModificationInColumnToMovieTable.Designer.cs">
+      <DependentUpon>201802191701106_AddModificationInColumnToMovieTable.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Customer.cs" />
@@ -252,10 +277,12 @@
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Models\MembershipType.cs" />
+    <Compile Include="Models\Min18YearsIfIsAMember.cs" />
     <Compile Include="Models\Movie.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
-    <Compile Include="ViewModels\NewCustomerViewModel.cs" />
+    <Compile Include="ViewModels\CustomerFormViewModel.cs" />
+    <Compile Include="ViewModels\MovieFormViewModel.cs" />
     <Compile Include="ViewModels\RandomMovieViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -325,7 +352,8 @@
     <Content Include="Views\Customers\Index.cshtml" />
     <Content Include="Views\Customers\Detail.cshtml" />
     <Content Include="Views\Movies\Detail.cshtml" />
-    <Content Include="Views\Customers\New.cshtml" />
+    <Content Include="Views\Movies\MovieForm.cshtml" />
+    <Content Include="Views\Customers\CustomerForm.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -368,6 +396,24 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201802180111024_SomeModoficationInDbContext.resx">
       <DependentUpon>201802180111024_SomeModoficationInDbContext.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201802190105589_AddColumnNumberInStockToMovieTable.resx">
+      <DependentUpon>201802190105589_AddColumnNumberInStockToMovieTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201802190120104_AddColumnReleaseDateToMovieTable.resx">
+      <DependentUpon>201802190120104_AddColumnReleaseDateToMovieTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201802190123300_AddColumnDateAddedToMovieTable.resx">
+      <DependentUpon>201802190123300_AddColumnDateAddedToMovieTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201802191537176_SetNameOfMembershipType.resx">
+      <DependentUpon>201802191537176_SetNameOfMembershipType.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201802191545352_AddSomeDataToGenreTable.resx">
+      <DependentUpon>201802191545352_AddSomeDataToGenreTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201802191701106_AddModificationInColumnToMovieTable.resx">
+      <DependentUpon>201802191701106_AddModificationInColumnToMovieTable.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
